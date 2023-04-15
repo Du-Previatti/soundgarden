@@ -9,6 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+
+    <script src="./js/index.js" defer></script>
 </head>
 
 <body>
@@ -86,7 +88,24 @@
             </div>
         </section>
 
+        <!-- Modal :) -->
+        <div id="fade" class="hide"></div>
+        <div id="modal" class="hide">
+            <div id="modal-header">
+                <h2>faça sua reserva:</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div id="modal-body">
+                <form action="">
+                    <input type="text" name="nome" placeholder="nome completo">
+                    <input type="email" name="email" placeholder="e-mail">
+                    <button type="submit" id="button-reservar">reservar</button>
+                </form>
+            </div>
+        </div>
     </main>
+
+
     <footer>
         <div class="container d-flex justify-content-center align-items-center">
             <a href="#">
