@@ -1,3 +1,6 @@
+
+
+
 async function fetchEventos() {
   try {
     const response = await fetch('https://soundgarden-api.vercel.app/events');
