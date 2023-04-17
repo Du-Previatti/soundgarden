@@ -17,13 +17,28 @@
     <header class=" d-flex justify-content-center align-items-center">
         <img src="img/Sound-logo (1).png" width="300" alt="">
     </header>
-    <main>
-        <section class="full d-flex justify-content-center align-items-center"
-            style="background-color: #F8BBD0; color: #fff">
-            <div class="text-center">
-                <h1>Adicione um banner maneiro aqui</h1>
+    <div class="slideshow-wrapper">
+        <div class="slideshow-container">
+            <div class="slide active">
+                <img src="img/img-banner1.jpg" alt="Imagem 1">
             </div>
-        </section>
+            <div class="slide">
+                <img src="img/img-banner2.jpg" alt="Imagem 2">
+            </div>
+            <div class="slide">
+                <img src="img/img-banner3.jpg" alt="Imagem 3">
+            </div>
+        </div>
+
+        <div class="buttons">
+            <input type="button" value="1" onclick="changeSlide(0)">
+            <input type="button" value="2" onclick="changeSlide(1)">
+            <input type="button" value="3" onclick="changeSlide(2)">
+        </div>
+    </div>
+
+    <main>
+
         <section class="full">
             <div class="container text-center">
                 <h2>Próximos eventos</h2>
@@ -125,4 +140,7 @@
     </footer>
 </body>
 <script src="/js/events-index.js"></script>
+<script src="js/slideshow.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
 </html>
