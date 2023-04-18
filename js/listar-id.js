@@ -1,13 +1,13 @@
-//
 export const eventListById = async (id) => {
-    return fetch(`https://soundgarden-api.vercel.app/events/${id}`).then(
-        (response) => {
-        if (response.ok) {
-            return response.json();
+    try {
+        const response = await fetch(`https://soundgarden-api.vercel.app/events/${id}`);
+        if (!response.ok) {
+            throw new Error('ERRO: Impossível carregar a lista!');
         }
-        throw new Error('Lista o evento, indisponivel');
-    }).then((data) => {
-       
-        return data
-    });
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error(error);
+        throw new Error('ERRO: Falha ao carregar lista!');
+    }
 };
