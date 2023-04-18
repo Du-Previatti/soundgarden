@@ -21,7 +21,7 @@ async function fetchEventos() {
           <h2>${evento.name} - ${new Date(evento.scheduled).toLocaleDateString()}</h2>
           <h4>${evento.attractions.join(', ')}</h4>
           <p>${evento.description}</p>
-          <a href="#" class="btn btn-primary">reservar ingresso</a>
+          <a href="" class="btn btn-primary">reservar ingresso</a>
         </article>
       `).join(''));
   

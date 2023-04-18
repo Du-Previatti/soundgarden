@@ -53,29 +53,10 @@ const deleteEvent = async () => {
     });
 }
 
-// Função para formatar a data e hora do evento para o formato aceito pelo servidor
-// const formatDate = (data) => {
-//     const [date, time] = data.split(', ');
-//     const [day, month, year] = date.split('/');
-
-//     return `${year}-${month}-${day}T${time}:00.000Z`
-// }
-
 // Adiciona um evento de envio de formulário ao formulário na página
 const form = document.querySelector("form");
 form.addEventListener("submit",async (e) => {
     e.preventDefault();
-
-    // Obtém os valores dos atributos do evento do formulário
-    // const attractionsValues = form.atracoes.value.split(',');
-    // const eventToCreate = {
-    //     name: form.nome.value,
-    //     poster:"url-img",
-    //     attractions: attractionsValues,
-    //     description: form.descricao.value,
-    //     scheduled: formatDate(form.data.value),
-    //     number_tickets: form.lotacao.value,
-    // };
 
     try {
         // Chama a função deleteEvent para atualizar os dados do evento no servidor
