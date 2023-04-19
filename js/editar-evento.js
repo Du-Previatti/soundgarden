@@ -1,7 +1,7 @@
 
 // Linkar BTN .btn.btn-secondary com a pagina de admin
 // altera o valor do atributo "href" para "editar-evento.html
-const meuBotao = document.querySelector(".btn.btn-secondary");
+const meuBotao = document.querySelector(".btn.btn-primary");
 console.log(meuBotao);
 
 meuBotao.href = 'editar.html';

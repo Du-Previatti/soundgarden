@@ -72,7 +72,7 @@ form.addEventListener("submit",async (e) => {
         
     } catch (error) {
         // Exibe uma mensagem de alerta ao usuário informando que ocorreu um erro ao atualizar o evento
-        alert("error: "+ error.data +"\nErro ao excluir evento. Tente Novamente")
+        alert("error: "+ error.data +"\nErro ao criar evento. Tente Novamente")
         
     }
 });
