@@ -72,30 +72,43 @@ if (idEvent) {
     // Seleciona o elemento com o id "email" e armazena o valor de seu campo "value" na variável "email"
     const email = document.getElementById("email").value;
     
-    // Cria um objeto "body" com as informações necessárias para realizar a reserva
-    const body = {
-      "owner_name": nome,
-      "owner_email": email,
-      "number_tickets": 1,
-      "event_id": idEvent
-    };
-    
-    // Imprime o objeto "body", bem como as variáveis "nome" e "email" no console
-    console.log(body, nome, email);
-    
     try {
-      // Chama a função "reservarIngresso" com os parâmetros "body" e "idEvent", aguardando sua conclusão
-      await reservarIngresso(body, idEvent);
-      
-      // Exibe uma mensagem de alerta informando que a reserva foi realizada com sucesso
-      alert("Reserva realizada com sucesso");
-    
-      // Redireciona o usuário para a página "index.html"
-      window.location.replace("eventos.html");
+      // Chama a API para obter as informações do evento com o ID especificado
+      const response = await fetch(`https://soundgarden-api.vercel.app/events/${idEvent}`);
+      const eventData = await response.json();
+
+      // Verifica se há ingressos disponíveis para esse evento
+      if (eventData.number_tickets > 0) {
+        // Cria um objeto "body" com as informações necessárias para realizar a reserva
+        const body = {
+          "owner_name": nome,
+          "owner_email": email,
+          "number_tickets": 1,
+          "event_id": idEvent
+        };
+
+        // Chama a função "reservarIngresso" com os parâmetros "body" e "idEvent", aguardando sua conclusão
+        await reservarIngresso(body, idEvent);
+
+        // Exibe uma mensagem de alerta informando que a reserva foi realizada com sucesso
+        alert("Reserva realizada com sucesso");
+
+        // Redireciona o usuário para a página "index.html"
+        window.location.replace("eventos.html");
+      } else {
+        // Exibe uma mensagem de erro informando que não há ingressos disponíveis para esse evento
+        alert("Não há ingressos disponíveis para esse evento.");
+      }
     } catch (error) {
       // Exibe uma mensagem de alerta informando que ocorreu um erro ao realizar a reserva
       alert("error: " + error.data + "\nErro ao criar reserva. Tente Novamente");
     }
   });
 }
+
+
+
+
+
+
 
