@@ -107,7 +107,7 @@ if (idEvent) {
         alert("Reserva realizada com sucesso");
 
         // Redireciona o usuário para a página "index.html"
-        window.location.replace("eventos.html");
+        window.location.replace("index.html");
       } else {
         // Exibe uma mensagem de erro informando que não há ingressos disponíveis para esse evento
         alert("Não há ingressos disponíveis para esse evento.");
