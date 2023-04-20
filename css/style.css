@@ -125,23 +125,6 @@ button:hover {
     cursor: pointer;
 }
 
-/* #fade, #modal {
-    transition: 0.8s;
-    opacity: 1;
-    pointer-events: all;
-}
-
-#modal.hide,
-#fade.hide {
-  opacity: 0;
-  pointer-events: none;
-}
-
-#modal.hide {
-    top: 0;
-  } */
-
-
 /* slider show img */
 .slideshow-wrapper {
     position: relative;
@@ -150,13 +133,14 @@ button:hover {
     align-items: center;
     flex-direction: column;
     margin: 0;
-    margin-top: 1vh;
+    margin-top: .5vh;
     background-color: whitesmoke;
     width: 100%;
     height: 100%;
     position: relative;
     overflow: hidden;
-    padding-bottom: 150px;
+    padding-bottom: 25px;
+    box-shadow: 0px 5px 4px 0px rgb(63 63 63 / 20%);
 }
 
 .slideshow-container {
@@ -195,7 +179,7 @@ button:hover {
 }
 
 input[type=button] {
-    background-color: gray;
+    background-color: #C2185B;
     border: none;
     text-align: center;
     text-decoration: none;
@@ -203,7 +187,26 @@ input[type=button] {
     font-size: 0px;
     margin: 4px 8px;
     cursor: pointer;
-    width: 20px;
-    height: 20px;
-    border-radius: 25%;
+    width: 15px;
+    height: 15px;
+    border-radius: 25px;
+}
+
+input[type=button]:hover {
+    background-color: #2d30e0;
+}
+
+.close {
+    text-decoration: none;
+    color: #C2185B;
+}
+
+#button-footer {
+    text-decoration: none;
+    font-size: large;
+    color: #000;
+}
+
+#button-footer:hover {
+    color: #C2185B;
 }
